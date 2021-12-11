@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html> 
+<html>
+    <head>
+        <meta http-equiv="X-Frame-Options" content="SAMEORIGIN / DENY ">
+        <link rel="shortcut icon" href="./02092815eabf14447eb448ef67ddb237747bd312.jpg@96w_96h_1c_1s.ico" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta charset="utf-8">
+        <title id="t">第一节:安装scratch软件</title>
+    </head>
+    <body style="background-color:skyblue">
+        <div style="background-color:cornflowerblue;width:1200px;height:650px;border-radius:3%;border:solid 2px green;position:absolute;left:298px;top:150px;">
+            <p style="color:white;background-image: linear-gradient(red, lightgreen);">第一节:安装scratch软件</p>
+            <video id="video-active" style="border:solid 2px skyblue;border-radius:10%;width:800px;position:absolute;top:130px;left:200px;" controls="controls">
+                <source src="./2021-12-06 20-45-43.mp4" type="video/mp4" />
+            </video>
+        </div>
+        <audio id="music" src="" preload="auto"></audio>
+        <div style="height:30px;width:1900px;background-color:red;border:solid 2px black">
+            <a href="file:\\\H:\\scratch教学\\main.html" onmousemove="changeCursor()" id="p1" onselectstart="return false;" unselectable="on" style="text-decoration:none;color:white;font-size:20px;position:absolute;left:300px;top:10px">scratch教学</a>
+            <table>
+                <tr>
+                    <td>
+                        <!--i style="background-image:url(images/th.jpg);"></i!-->
+                        <div id="p2" onmousemove="changeCursor()" type="button" style="padding-left:30px;color:white;position:absolute;left:1000px;border-radius:30%;" onclick=Clicklogin()>登录</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <iframe id="ir" style="display:none;width:350px;height:140px;position:absolute;top:50px;left:900px;" src="./login.html"></iframe>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="3" style="border-radius:10%;background-color:antiquewhite;width:150px;height:50px;top:50px;left:550px;position:absolute;border:solid 2px black/*添加边框*/">
+            <!--浮动框设计-->
+            <label><input id="1" type="checkbox" />开启语言模式</label><br />
+            <label><input id="2" type="checkbox" />关闭语言模式</label>
+        </div>
+        <a style="text-decoration:none;position:absolute;left:450px;top:12px;color:white" href="file:///H:/scratch教学/main.html">首页</a>
+        <a style="text-decoration:none;position:absolute;left:500px;top:12px;color:white" href="./main.html">社区</a>
+        <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+        <script type="text/javascript">
+            function c() {
+                window.open("file:///H:/scratch%E6%95%99%E5%AD%A6/main.html", "_self");
+            }
+            var a = 0, b = 0;
+            var x = document.getElementById("video-active");
+
+            document.addEventListener("visibilitychange", function () {
+                if (document.visibilityState == "visible") {
+                    document.getElementById("t").innerHTML = "第一节:安装scratch软件";
+                }
+
+                $(document).ready(function () {
+
+                    $("#video-active").on(
+                        "timeupdate",
+                        function (event) {
+                            a = this.currentTime,
+                                b = this.duration;
+
+                        });
+                });
+                //alert(b);
+                if (document.visibilityState == "hidden") {
+                    if (a != b) {
+                        document.getElementById("t").innerHTML = "大哥!你还没学习完呢!";
+                    }
+                    if (a == b) {
+                        document.getElementById("t").innerHTML = "呃....不要抛弃我,大哥!";
+                    }
+
+                }
+            })
+        </script>
+        <script>
+            var u = true;
+            function k() {
+                var l = document.getElementById("1").checked;
+                var w = document.getElementById("2").checked;
+                if (l == true && w == false) {
+                    //alert("1");
+                    u = true;
+                    document.getElementById("2").checked = false;
+                }
+                else {
+                    u = false;
+                    document.getElementById("1").checked = false;
+                }
+                //alert(u);
+            }
+            setInterval(k, 100);
+            function changeCursor() {
+                document.getElementById("p1").style.cursor = "pointer";
+                document.getElementById("p2").style.cursor = "pointer";
+                if (u) {
+                    //alert();
+                    document.getElementById("music").src = "https://fanyi.baidu.com/gettts?lan=zh&text=scratch教学&spd=5&source=web";
+                    document.getElementById("music").play()
+                }
+                //document.getElementById("p1").style.cursor = "text";
+            }
+        </script>
+        <script src="file:///H:/scratch%E6%95%99%E5%AD%A6/js/1.js"></script>
+    </body>
+</html>
+
