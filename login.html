@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>Login</title>
+    </head>
+    <body>
+        <from name="login" action="login.php" method="post">
+            <div style="width:300px;background-color:azure;border:solid 2px black;border-radius:10%">
+                <table onload="setInterval(a,100)">
+                    <tr>
+                        <!--<td>
+                    <p>User:</p>
+                </td>-->
+                        <td>
+                            <div>
+                                <input name="user" id="inputuser" value="" />
+                                <span id="userspan" value="" style="display:inline;position:absolute;left:30px;color:silver">用户名</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!--<td>
+                    <p>password:</p>
+                </td>-->
+                        <td>
+                            <div>
+                                <input name="password" id="inputpassword" value="" type="password" />
+                                <span id="passwordspan" value="" style="display:inline;position:absolute;left:30px;color:silver">密码</span>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input style="left:103px;bottom:845px;" type="radio" />
+                        </td>
+                        <td style="position:absolute;left:35px;bottom:50px;">
+                            <p style="font-size:10px">点击同意</p>
+                        </td>
+                        <td style="position:absolute;left:85px;bottom:60px;">
+                            <a style="font-size:10px" target="_blank" href="./User agreement.html">《用户协议》</a>
+                        </td>
+                        <td style="position:absolute;left:163px;bottom:50px;">
+                            <p style="font-size:10px">和</p>
+                        </td>
+                        <td style="position:absolute;left:173px;bottom:60px;">
+                            <a style="font-size:10px" href="2">《隐私政策》</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!--<td></td>-->
+                        <td>
+                            <button type="submit" name="submit" style="background-color:deepskyblue;border-radius:30%">登录</button>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <button style="background-color:deepskyblue;border-radius:30%" onclick="register()">注册</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </from>
+        <script src="./js/register.js"></script>
+        <script src="./js/input.js"></script>
+    </body>
+</html>

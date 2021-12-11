@@ -1,0 +1,153 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" href="./images/02092815eabf14447eb448ef67ddb237747bd312.jpg@96w_96h_1c_1s.ico" />
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN / DENY ">
+    <title>scratch教学</title>
+</head>
+
+<body onload="setInterval(k, 100);" style="background:url(./images/OIP-C.jpg);background-size: cover;">
+    <div id="snow"></div>
+    <div id="3" style="border-radius:10%;background-color:antiquewhite;width:150px;height:50px;top:50px;left:550px;position:absolute;border:solid 2px black/*添加边框*/">
+        <!--浮动框设计-->
+        <label><input id="1" type="checkbox" />开启语言模式</label><br />
+        <label><input id="2" type="checkbox" />关闭语言模式</label>
+    </div>
+    
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%
+        }
+    </style>
+    <div style="height:30px;width:1900px;background-color:red;border:solid 2px black">
+        <table>
+            <tr>
+                <td>
+                    <!--<i style="background-image:url(images/th.jpg);"></i>-->
+                    <div type="button" style="padding-left:30px;color:white;position:absolute;left:1000px;border-radius:30%;" onclick=Clicklogin()>登录</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <iframe id="ir" style="display:none;width:350px;height:140px;position:absolute;top:50px;left:900px;" src="./login.html"></iframe>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <pre>
+    <h1 id="h1" style="width:400px;height:150px;background-color:aqua;color:red;font-size:30px;/*border-radius:30%;border:solid 2px blue*/">  <br /><br />    迎入吾之网站</h1>
+    <p style="color:paleturquoise;font-size:30px;">开发者:周泓恺</p>
+    <h1 onmousemove="changeCursor()" id="p1" onselectstart="return false;" unselectable="on" style="color:white;font-size:20px;position:absolute;left:300px;top:1px">scratch教学</h1>
+        </pre>
+    <audio preload="auto" id="music" src=""></audio>
+    <a style="text-decoration:none;position:absolute;left:450px;top:12px;color:white" href="./main.html">首页</a>
+    <a style="text-decoration:none;position:absolute;left:500px;top:12px;color:white" href="./main.html">社区</a>
+    <a style="text-decoration:none;position:absolute;left:550px;top:12px;color:white" download="Scratch Desktop.zip" href="./Scratch Desktop Setup 3.9.0.rar">下载</a>
+    <!--<div style="/*opacity: 0.5;*/background-color:powderblue;border:solid 1px black;position:absolute;bottom:170px;width:1000px;height:300px;border-radius:3%">
+
+        </div>-->
+    <table>
+        <tr>
+            <td>
+                <a style="border:solid 1px black;border-radius:30%;background-color:paleturquoise;color:white;text-decoration:none" href="./help.html">本网站介绍</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a style="text-decoration:none;background-color:antiquewhite;font-size:20px;border:solid 2px black" href="./%E6%95%99%E7%A8%8B/1.htm">1、安装scratch软件</a>
+            </td>
+        </tr>
+    </table>
+    <div onmouseout="display2()" onmousemove="display1()" style="position:absolute;right:100px;width:300px;height:300px;background-color:forestgreen">
+        <!--用户交互-->
+        <div id="q" style="display:none;height:200px;width:180px;background-image:url(./images/1.png)">
+            <p style="font-size:0px"></p>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery-1.10.1.js"></script>
+    <!--<script type="text/javascript" src="js/common_util.js"></script>-->
+    <script>
+        var u = true;//判断是否是语言模式
+        function k() {
+            var l = document.getElementById("1").checked;
+            var w = document.getElementById("2").checked;
+            if (l == true) {
+                //alert("1");
+                u = true;
+                document.getElementById("2").checked = false;
+            }
+            else if (w == true) {
+                u = false;
+                document.getElementById("1").checked = false;
+            }
+            //alert(u);
+        }
+        setInterval(k, 100);
+        function changeCursor() {
+            document.getElementById("p1").style.cursor = "pointer";
+            document.getElementById("music").src = "https://fanyi.baidu.com/gettts?lan=zh&text=scratch教学&spd=4&source=web";
+            if (u) {
+                document.getElementById("music").play()
+            }
+            //document.getElementById("p1").style.cursor = "text";
+        }
+        function display1() {
+            document.getElementById("q").style.display = "block";
+            document.getElementById("music").src = "https://fanyi.baidu.com/gettts?lan=zh&text=哞哞:此网站之神秘也&spd=3&source=web";
+            if (u) {
+                document.getElementById("music").play();
+            }
+            document.getElementById("h1").innerHTML = "~嘿，被你发现了~";
+        }
+        function display2() {
+            document.getElementById("q").style.display = "none";
+            document.getElementById("h1").innerHTML = "哞哞:此网站之神秘也,<br>        彩蛋以百数";
+        }
+    </script>
+    <style>
+        #snow {
+            z-index:-1;
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: url(./images/雪.png), url(./images/雪.png);
+            -webkit-animation: snow 13s linear infinite;
+            animation: snow 15s linear infinite;
+        }
+
+        @keyframes snow {
+            0% {
+                background-position: 0 0, 0 0;
+            }
+            
+            100% {
+                background-position: 500px 1000px, 500px 500px;
+            }
+        }
+
+        @-webkit-keyframes snow {
+            0% {
+                background-position: 0 0, 0 0;
+            }
+
+            100% {
+                background-position: 500px 1000px, 500px 500px;
+            }
+        }
+    </style>
+    <footer style="background-color:rgb(255,0,110,0.2);width:1800px;height:200px;position:absolute;bottom:30px;border:solid 2px black;">
+        <p style="font-family:SimHei;color:cornflowerblue">友情链接</p>
+        <a style="text-decoration:none" href="https://www.scratch-cn.cn/">scratch官网</a>
+        <a style="text-decoration:none" href="https://code.xueersi.com/">学而思编程</a>
+        <hr style="transform:rotate(90deg);width:200px;position:absolute;top:100px;left:100px" />
+    </footer>
+
+    <script src="./js/1.js"></script>
+</body>
+</html>
